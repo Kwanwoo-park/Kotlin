@@ -7,7 +7,7 @@ package chapter4
 //}
 
 class Person (val name: String) {
-    companion object Loader {
-        fun fromJSON(jsonText: String): Person = ...
-    }
+//    companion object Loader {
+//        fun fromJSON(jsonText: String): Person = ...
+//    }
 }

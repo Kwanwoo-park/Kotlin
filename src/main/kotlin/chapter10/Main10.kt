@@ -85,17 +85,17 @@ fun KProperty<*>.getSerializer(): ValueSerializer<Any?>? {
     return valueSerializer as ValueSerializer<Any?>
 }
 
-fun <T: Any> deserialize(json: Reader, targetClass: KClass<T>): T {
-    val seed = ObjectSeed(targetClass, ClassInfoCache())
-    Parser(json, seed).parse()
-    return seed.spawn()
-}
+//fun <T: Any> deserialize(json: Reader, targetClass: KClass<T>): T {
+//    val seed = ObjectSeed(targetClass, ClassInfoCache())
+//    Parser(json, seed).parse()
+//    return seed.spawn()
+//}
 
-fun serializerForType(type: Type): ValueSerializer<out Any?>? =
-    when(type) {
-        Byte::class.java -> ByteSerializer
-        Int::class.java -> IntSerializer
-        Boolean::class.java -> BooleanSerializer
-        //...
-        else -> null
-    }
+//fun serializerForType(type: Type): ValueSerializer<out Any?>? =
+//    when(type) {
+//        Byte::class.java -> ByteSerializer
+//        Int::class.java -> IntSerializer
+//        Boolean::class.java -> BooleanSerializer
+//        //...
+//        else -> null
+//    }
